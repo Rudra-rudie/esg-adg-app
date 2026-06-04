@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: esg-sdg-analyzer
+    env: docker
+    plan: standard
+    healthCheckPath: /health
+    envVars:
+      - key: PORT
+        value: 8000
+    autoDeploy: true
